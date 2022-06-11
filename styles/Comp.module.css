@@ -1,0 +1,195 @@
+.mobNav {
+  display: none;
+  visibility: hidden;
+}
+
+.navbar .container {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  max-width: 1150px;
+  margin: auto;
+}
+.navbar .container .leftnav {
+  display: flex;
+}
+.navbar .container .leftnav img {
+  width: 4.5rem;
+  padding-right: 5rem;
+  cursor: pointer;
+}
+.navbar .container .midnav {
+  visibility: hidden;
+  display: none;
+}
+.navbar .container .midnav .link, .navbar .container .midnav a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+.navbar .container .hambergur {
+  display: block;
+  width: 25px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
+}
+.navbar .container .hambergur:after, .navbar .container .hambergur:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+.navbar .container .hambergur .bar {
+  content: "";
+  display: block;
+  width: 70%;
+  height: 3px;
+  background-color: black;
+  margin: 3px 0;
+  transition: 0.4s;
+}
+.navbar .container .hambergur.isActive:after {
+  transform: rotate(-45deg) translate(3px, -7px);
+}
+.navbar .container .hambergur.isActive:before {
+  transform: rotate(45deg) translate(2px, 5px);
+}
+.navbar .container .hambergur.isActive .bar {
+  opacity: 0;
+}
+@media only screen and (min-width: 600px) {
+  .navbar .container .navbar {
+    padding: 1.5rem;
+  }
+  .navbar .container .midnav {
+    visibility: visible;
+    display: contents;
+  }
+  .navbar .container .midnav .arrow {
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+  }
+  .navbar .container .midnav .dropdown {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+  }
+  .navbar .container .midnav .dropdown a {
+    text-decoration: none;
+    color: inherit;
+  }
+  .navbar .container .midnav .dropdowncontent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 200px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    padding: 12px 16px;
+    z-index: 1000;
+  }
+  .navbar .container .midnav .dropdown:hover .dropdowncontent {
+    display: flex;
+    flex-direction: column;
+  }
+  .navbar .container .midnav .dropdowncontent a {
+    color: black;
+    padding: 12px 16px;
+  }
+  .navbar .container .midnav .dropdowncontent a:hover {
+    background-color: #f1f1f1;
+  }
+  .navbar .container .rightnav button {
+    visibility: hidden;
+    display: none;
+  }
+}
+.navbar .container .rightnav {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 599px) {
+  .mobNav.navopen {
+    min-height: 100vh;
+    padding: 1rem 4rem;
+    display: flex;
+    flex-direction: column;
+    visibility: visible;
+  }
+  .mobNav.navopen .dropdown {
+    position: relative;
+  }
+  .mobNav.navopen .arrow {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: solid black;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: transform 0.2s;
+  }
+  .mobNav.navopen .arrow.off {
+    transform: rotate(-45deg);
+  }
+  .mobNav.navopen .link, .mobNav.navopen a {
+    padding: 0.8rem 0;
+    color: #000F08;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .mobNav.navopen .dropdowncontent {
+    margin-left: 2rem;
+    display: none;
+  }
+  .mobNav.navopen .dropdowncontent.on {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.footer {
+  background-color: #515151;
+}
+.footer .container {
+  color: white;
+  text-transform: uppercase;
+  font-size: 10px;
+  display: grid;
+  text-align: center;
+  padding: 5px 0;
+  line-height: 1.3rem;
+  padding: 1.5rem;
+  max-width: 1150px;
+  margin: auto;
+}
+.footer .container .link {
+  text-decoration: none;
+  color: white;
+}
+@media only screen and (min-width: 600px) {
+  .footer .container {
+    color: white;
+    text-transform: uppercase;
+    font-size: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    max-width: 1150px;
+    margin: auto;
+    font-size: 0.8rem;
+  }
+}/*# sourceMappingURL=Comp.module.css.map */

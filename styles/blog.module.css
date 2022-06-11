@@ -1,0 +1,241 @@
+.mainbody .mainimg {
+  width: 100%;
+  height: 30vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.mainbody .authorimg {
+  border-radius: 100%;
+  width: 35px;
+  margin-right: 1rem;
+}
+.mainbody article {
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.452);
+  max-width: 700px;
+  margin: auto;
+  padding: 1rem 1rem;
+  margin: 0.5rem auto;
+}
+.mainbody h1 {
+  font-size: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  margin: 2rem 0 1rem 0;
+  color: rgb(0, 129, 80);
+}
+.mainbody .author {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  max-width: 500px;
+  margin-bottom: 4rem;
+  margin-bottom: 4rem;
+}
+.mainbody .author p {
+  color: rgba(0, 0, 0, 0.541);
+}
+.mainbody .main {
+  max-width: 900px;
+  margin: auto;
+}
+.mainbody .main img {
+  display: block;
+  width: 80%;
+  height: 40vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 2rem auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+  text-align: center;
+}
+.mainbody .main .ph2 {
+  text-transform: capitalize;
+  font-size: 20px;
+  margin: 1rem 0;
+}
+.mainbody .main .pp {
+  font-size: 15px;
+  margin: 0.5rem 0;
+}
+.mainbody .main .pa {
+  color: rgb(36, 88, 167);
+}
+.mainbody hr {
+  margin-top: 4rem;
+  width: 95%;
+  margin: 0 auto;
+}
+.mainbody .wComment {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+.mainbody .wComment form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+}
+.mainbody .wComment form div {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.mainbody .wComment form input:nth-child(1),
+.mainbody .wComment form input:nth-child(2),
+.mainbody .wComment form input:nth-child(3), .mainbody .wComment form textarea {
+  resize: none;
+  font-size: 17px;
+  padding: 0.8rem 1.5rem;
+  margin: 1rem 0;
+  border-radius: 15px;
+  border: 0.1px solid #bdbdbd;
+  background-color: rgb(229, 247, 238);
+  transition: 0.2s ease-in;
+}
+.mainbody .wComment form label {
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  position: absolute;
+  transition: 0.3s ease-in-out;
+}
+.mainbody .wComment form label[for=name], .mainbody .wComment form label[for=email] {
+  top: 44.5%;
+  left: 5%;
+}
+.mainbody .wComment form label[for=comment] {
+  bottom: 15%;
+  left: 5%;
+}
+.mainbody .wComment form .name:not(:-moz-placeholder-shown).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-moz-placeholder-shown).email:not(:focus) ~ .emailT {
+  top: 8%;
+  left: 6%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form .name:not(:-ms-input-placeholder).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-ms-input-placeholder).email:not(:focus) ~ .emailT {
+  top: 8%;
+  left: 6%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form .name:focus ~ .nameT, .mainbody .wComment form .name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
+.mainbody .wComment form .email:focus ~ .emailT, .mainbody .wComment form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
+  top: 8%;
+  left: 6%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form .comment:not(:-moz-placeholder-shown).comment:not(:focus) ~ .commentT {
+  top: 2%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form .comment:not(:-ms-input-placeholder).comment:not(:focus) ~ .commentT {
+  top: 2%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form .comment:focus ~ .commentT, .mainbody .wComment form .comment:not(:placeholder-shown).comment:not(:focus) ~ .commentT {
+  top: 2%;
+  font-size: 0.6rem;
+}
+.mainbody .wComment form input[type=submit] {
+  margin-bottom: 3rem;
+  max-width: 40%;
+  border: none;
+  padding: 0.7rem 0;
+  font-weight: bolder;
+  letter-spacing: 0.2rem;
+  text-transform: uppercase;
+  color: #252c2f;
+  background: #f5c500;
+  transition: 0.5s ease-in-out;
+}
+.mainbody .wComment form input[type=submit]:hover {
+  background: #252c2f;
+  color: #f5c500;
+  border: none;
+}
+.mainbody .wComment form input:hover,
+.mainbody .wComment form textarea:hover {
+  border: 0.2px solid #00ca9e;
+}
+.mainbody .wComment form input:focus,
+.mainbody .wComment form textarea:focus {
+  outline: none;
+  border: 0.2px solid violet;
+}
+.mainbody .wComment .onsub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+  background: #f5c500;
+  padding: 7rem 0.25rem;
+  border-radius: 20px;
+}
+.mainbody .wComment .onsub h2 {
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #000f08;
+}
+.mainbody .wComment .onsub p {
+  font-size: 15px;
+  margin-top: 0.7rem;
+  color: rgba(35, 37, 36, 0.7803921569);
+}
+.mainbody .sComments {
+  margin-top: 4rem;
+  max-width: 900px;
+  margin: auto;
+}
+.mainbody .sComments h3 {
+  padding: 0 2rem;
+  text-transform: uppercase;
+}
+.mainbody .sComments p {
+  text-transform: capitalize;
+  margin: 1.5rem 3rem;
+}
+.mainbody .sComments span:nth-child(1) {
+  font-weight: bold;
+  text-transform: uppercase;
+  padding-right: 1.5rem;
+}
+.mainbody .sComments span:nth-child(2) {
+  padding-left: 1.5rem;
+}
+
+@media only screen and (min-width: 600px) {
+  .mainbody h1 {
+    margin-top: 4rem;
+    font-size: 40px;
+  }
+  .mainbody .main .ph2 {
+    font-size: 25px;
+  }
+  .mainbody .wComment form label[for=name], .mainbody .wComment form label[for=email] {
+    top: 43%;
+    left: 2%;
+  }
+  .mainbody .wComment form label[for=comment] {
+    bottom: 15%;
+    left: 2%;
+  }
+  .mainbody .wComment form .name:not(:-moz-placeholder-shown).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-moz-placeholder-shown).email:not(:focus) ~ .emailT {
+    top: 8%;
+    left: 2%;
+  }
+  .mainbody .wComment form .name:not(:-ms-input-placeholder).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-ms-input-placeholder).email:not(:focus) ~ .emailT {
+    top: 8%;
+    left: 2%;
+  }
+  .mainbody .wComment form .name:focus ~ .nameT, .mainbody .wComment form .name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
+.mainbody .wComment form .email:focus ~ .emailT, .mainbody .wComment form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
+    top: 8%;
+    left: 2%;
+  }
+}
+@media only screen and (min-width: 870px) {
+  .mainbody .main img {
+    height: 300px;
+  }
+}/*# sourceMappingURL=blog.module.css.map */

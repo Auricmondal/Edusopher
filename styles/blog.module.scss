@@ -1,0 +1,240 @@
+.mainbody{
+
+    .mainimg{
+        width: 100%;
+        height: 30vh;
+        object-fit: cover;
+    }
+    .authorimg{
+        border-radius: 100%;
+        width: 35px;
+        margin-right: 1rem;
+    }
+    article{
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.452);
+        max-width: 700px;
+        margin: auto;
+        padding: 1rem 1rem ;
+        margin: 0.5rem auto;
+    }
+    h1{
+        font-size: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        margin: 2rem 0 1rem 0;
+        color: rgb(0, 129, 80);
+    }
+    .author{
+        
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        max-width: 500px;
+        margin-bottom: 4rem;
+        margin-bottom: 4rem;
+        p{
+            color: rgba(0, 0, 0, 0.541);
+        }
+    }
+    .main{
+        max-width: 900px;
+        margin: auto;
+        img{
+            display: block;
+            width: 80%;
+            height: 40vw;
+            object-fit: cover;
+            margin: 2rem auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.568);
+            text-align: center;
+        }
+        .ph2{
+        text-transform: capitalize;
+        font-size: 20px;
+        margin: 1rem 0;
+    }
+    .pp{
+        font-size: 15px;
+        margin: 0.5rem 0;
+    }
+    .pa{
+        color: rgb(36, 88, 167);
+    }
+    
+}
+
+hr{
+    margin-top: 4rem;
+    width: 95%;
+    margin:0  auto;
+}
+.wComment{
+    max-width: 600px;
+    margin: auto;
+    padding: 1rem;
+    form{
+        display: flex;
+        flex-direction: column;
+    margin-top: 1.5rem;
+
+    div{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+    }
+
+    input:nth-child(1),
+    input:nth-child(2),
+    input:nth-child(3),textarea {
+      resize: none;
+      font-size: 17px;
+      padding: 0.8rem 1.5rem ;
+      margin: 1rem 0;
+      border-radius: 15px;
+      border: 0.1px solid #bdbdbd;
+      background-color: rgb(229, 247, 238);
+      transition: 0.2s ease-in;
+      
+    }
+    label {
+        font-weight: bold;
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      position: absolute;
+      transition: .3s ease-in-out;
+    }
+
+    label[for='name'], label[for='email']{
+      top: 44.5%;
+      left: 5%;
+    }
+    label[for='comment']{
+      bottom:15%;
+      left: 5%;
+    }
+    .name:focus ~ .nameT,.name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
+    .email:focus ~ .emailT,.email:not(:placeholder-shown).email:not(:focus) ~ .emailT
+    {
+      top: 8%;
+      left: 6%;
+      font-size: 0.6rem;
+    }
+    .comment:focus ~ .commentT,.comment:not(:placeholder-shown).comment:not(:focus) ~ .commentT{
+            top: 2%;
+            font-size: 0.6rem;
+          }
+          input[type="submit"] {
+              margin-bottom: 3rem;
+              max-width: 40%;
+            border: none;
+            padding: 0.7rem 0;
+            font-weight: bolder;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            color: #252c2f;
+            background: #f5c500;
+            transition: 0.5s ease-in-out;
+          }
+          input[type="submit"]:hover {
+            background: #252c2f;
+            color: #f5c500;
+            border: none;
+          }
+          input:hover,
+textarea:hover {
+border: 0.2px solid#00ca9e;
+}
+
+input:focus,
+textarea:focus {
+outline: none;
+border: 0.2px solid violet;
+}}
+.onsub{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.158);
+    background: #f5c500;
+    padding: 7rem 0.25rem ;
+    border-radius: 20px;
+    h2{
+      font-size: 17px;
+      text-transform: uppercase;
+      color: #000f08;
+    }
+    p{
+      font-size: 15px;
+      margin-top: 0.7rem;
+      color: #232524c7;
+    }}
+}
+
+.sComments{
+    margin-top: 4rem;
+    max-width: 900px;
+    margin: auto;
+    
+
+    h3{
+        padding: 0 2rem;
+        text-transform: uppercase;
+    }
+
+    p{
+        text-transform: capitalize;
+        margin: 1.5rem 3rem;
+    }
+    span:nth-child(1){
+        font-weight: bold;
+        text-transform: uppercase;
+        padding-right: 1.5rem;
+    }
+    span:nth-child(2){
+        padding-left: 1.5rem;
+    }
+}
+    
+}
+
+@media only screen and (min-width: 600px){
+    .mainbody{
+        h1{
+            margin-top: 4rem;
+        font-size: 40px;
+    }
+    .main{
+        .ph2{
+            font-size: 25px;
+        }
+        
+    }
+
+    .wComment{
+        form{label[for='name'], label[for='email']{
+        top: 43%;
+        left: 2%;
+      }
+      label[for='comment']{
+        bottom:15%;
+        left: 2%;
+      }
+      .name:focus ~ .nameT,.name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
+      .email:focus ~ .emailT,.email:not(:placeholder-shown).email:not(:focus) ~ .emailT
+      {
+        top: 8%;
+        left: 2%;
+      }
+    }}
+}
+}
+
+@media only screen and (min-width: 870px){
+   .mainbody{ .main{
+        img{
+            height: 300px;
+        }
+    }}
+}

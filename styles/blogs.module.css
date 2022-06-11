@@ -1,0 +1,57 @@
+.blogs {
+  max-width: 1150px;
+  margin: auto;
+}
+.blogs h1 {
+  text-transform: capitalize;
+  margin-top: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+.posts {
+  display: grid;
+  max-width: 90vw;
+  margin: auto;
+}
+.posts .post {
+  overflow: hidden;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.404);
+  margin: 1.5rem 1rem;
+  background: rgb(190, 216, 131);
+}
+.posts .post .mainimg {
+  -o-object-fit: contain;
+     object-fit: contain;
+  width: 100%;
+  transition: width 0.2s ease-in-out;
+}
+.posts .post .authorimg {
+  width: 40px;
+  border-radius: 100%;
+}
+.posts .post .cardcont {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.posts .post .cardcont p:nth-child(2) {
+  color: rgba(3, 3, 3, 0.74);
+  font-size: 10px;
+  margin-top: 0.5rem;
+}
+.posts .post:hover .mainimg {
+  width: 105%;
+}
+
+@media only screen and (min-width: 600px) {
+  .posts {
+    margin-top: 2rem;
+    grid-template-columns: 50% 50%;
+  }
+}
+@media only screen and (min-width: 870px) {
+  .posts {
+    grid-template-columns: 33.3% 33.3% 33.3%;
+  }
+}/*# sourceMappingURL=blogs.module.css.map */
