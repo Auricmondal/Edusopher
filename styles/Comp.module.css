@@ -123,19 +123,20 @@
 @media only screen and (max-width: 599px) {
   .mobNav.navopen {
     min-height: 100vh;
-    padding: 1rem 4rem;
+    padding: 0 4rem 1rem 0;
     display: flex;
     flex-direction: column;
     visibility: visible;
   }
-  .mobNav.navopen .dropdown {
+  .mobNav.navopen div:nth-child(1) {
     position: relative;
+    padding: 0.8rem 1rem;
   }
   .mobNav.navopen .arrow {
     cursor: pointer;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 40%;
+    right: 5%;
     border: solid black;
     border-width: 0 3px 3px 0;
     display: inline-block;
@@ -146,11 +147,20 @@
   .mobNav.navopen .arrow.off {
     transform: rotate(-45deg);
   }
-  .mobNav.navopen .link, .mobNav.navopen a {
-    padding: 0.8rem 0;
+  .mobNav.navopen .link, .mobNav.navopen div:nth-child(1) {
+    background: #fffae3;
+    margin: 0.5rem 0;
+  }
+  .mobNav.navopen .link {
+    padding: 0.8rem 1rem;
     color: #000F08;
     cursor: pointer;
     text-decoration: none;
+  }
+  .mobNav.navopen a {
+    cursor: pointer;
+    text-decoration: none;
+    color: #000F08;
   }
   .mobNav.navopen .dropdowncontent {
     margin-left: 2rem;

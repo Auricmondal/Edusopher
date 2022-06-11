@@ -115,12 +115,13 @@ const Navbar = () => {
             <a onClick={menu}className={styles.link}>Home</a>
           </Link>
       <div className={styles.dropdown}>
-            <Link href="/blogs">
+           <div> <Link href="/blogs">
               <a onClick={menu}>
                 Blogs 
               </a>
             </Link>
             <i onClick={dropdown} className={ddBtn}></i>
+            </div>
             <div className={dropDon}>
               <Link href="/news">
                 <a onClick={menu}className={styles.link}>News</a>
