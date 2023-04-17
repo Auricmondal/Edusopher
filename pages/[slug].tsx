@@ -15,6 +15,7 @@ const Slug = ({ posts }: Props) => {
   };
   const router = useRouter();
   const { slug } = router.query;
+
   return (
     <div className={styles.blogs}>
       <Head>
@@ -22,7 +23,7 @@ const Slug = ({ posts }: Props) => {
       </Head>
 
       <h1>{slug}</h1>
-
+      {!posts[0]?<div className={styles.comingSoon}>Hold Tight! Coming soon!....</div>:
       <div className={styles.posts}>
         {posts &&
           posts.map((post) => (
@@ -58,6 +59,7 @@ const Slug = ({ posts }: Props) => {
             </Link>
           ))}
       </div>
+      } 
     </div>
   );
 };
@@ -111,5 +113,6 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
     props: {
       posts,
     },
+    revalidate: 25200,
   };
 };

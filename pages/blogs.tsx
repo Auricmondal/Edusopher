@@ -21,6 +21,7 @@ const Blogs = ({posts}: Props) => {
         <h1><b>Welcome To Blogs - All Blogs !</b></h1>
         </div>
         {/* Posts */}
+        
         <div className={styles.posts}>
         {posts&&posts.map((post)=>(
           <Link key={post._id} href={`/blogs/${post.slug.current}`}>
@@ -72,5 +73,6 @@ export async function getStaticProps() {
       props: {
         posts,
       },
+      revalidate: 25200,
     }
   }

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .mainbody .mainimg {
   width: 100%;
   height: 30vh;
@@ -10,7 +11,6 @@
   margin-right: 1rem;
 }
 .mainbody article {
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.452);
   max-width: 700px;
   margin: auto;
   padding: 1rem 1rem;
@@ -21,7 +21,7 @@
   text-align: center;
   text-transform: uppercase;
   margin: 2rem 0 1rem 0;
-  color: rgb(0, 129, 80);
+  color: #f34213;
 }
 .mainbody .author {
   align-items: center;
@@ -38,12 +38,12 @@
 .mainbody .main {
   max-width: 1000px;
   margin: auto;
-  padding: 0 2rem;
+  line-height: 32px !important;
 }
 .mainbody .main img {
   display: block;
-  width: 80%;
-  height: 40vw;
+  max-width: 100%;
+  height: auto;
   -o-object-fit: cover;
      object-fit: cover;
   margin: 2rem auto;
@@ -52,15 +52,51 @@
 }
 .mainbody .main .ph2 {
   text-transform: capitalize;
-  font-size: 20px;
+  font-size: 24px;
   margin: 1rem 0;
+  text-decoration: underline;
+}
+.mainbody .main .ph3 {
+  text-transform: capitalize;
+  font-size: 22px;
+  margin: 1rem 0;
+  text-decoration: underline;
+}
+.mainbody .main .ph4 {
+  font-size: 20px;
 }
 .mainbody .main .pp {
-  font-size: 15px;
+  font-size: 20px;
   margin: 0.5rem 0;
+  line-height: 1.5rem;
+  line-height: 30px;
 }
 .mainbody .main .pa {
   color: rgb(36, 88, 167);
+}
+.mainbody .main li {
+  margin: 1rem 2rem;
+  line-height: 1.5rem;
+}
+.mainbody .main em {
+  text-decoration: underline;
+}
+.mainbody .main blockquote::before {
+  content: open-quote;
+  font-size: 55px;
+}
+.mainbody .main blockquote::after {
+  content: close-quote;
+  font-size: 55px;
+  position: relative;
+  top: 10px;
+}
+.mainbody .main blockquote {
+  padding-top: 1rem;
+  font-size: 20px;
+  line-height: 30px;
+  font-style: italic;
+  quotes: "“" "”" "‘" "’";
 }
 .mainbody hr {
   margin-top: 4rem;
@@ -97,7 +133,7 @@
 .mainbody .wComment form label {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   transition: 0.3s ease-in-out;
 }
@@ -114,11 +150,6 @@
   left: 6%;
   font-size: 0.6rem;
 }
-.mainbody .wComment form .name:not(:-ms-input-placeholder).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-ms-input-placeholder).email:not(:focus) ~ .emailT {
-  top: 8%;
-  left: 6%;
-  font-size: 0.6rem;
-}
 .mainbody .wComment form .name:focus ~ .nameT, .mainbody .wComment form .name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
 .mainbody .wComment form .email:focus ~ .emailT, .mainbody .wComment form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
   top: 8%;
@@ -126,10 +157,6 @@
   font-size: 0.6rem;
 }
 .mainbody .wComment form .comment:not(:-moz-placeholder-shown).comment:not(:focus) ~ .commentT {
-  top: 2%;
-  font-size: 0.6rem;
-}
-.mainbody .wComment form .comment:not(:-ms-input-placeholder).comment:not(:focus) ~ .commentT {
   top: 2%;
   font-size: 0.6rem;
 }
@@ -172,6 +199,9 @@
   background: #f5c500;
   padding: 7rem 0.25rem;
   border-radius: 20px;
+  -webkit-clip-path: circle(3.3% at 0 100%);
+          clip-path: circle(3.3% at 0 100%);
+  animation: anim 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
 }
 .mainbody .wComment .onsub h2 {
   font-size: 17px;
@@ -179,9 +209,15 @@
   color: #000f08;
 }
 .mainbody .wComment .onsub p {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 0.7rem;
   color: rgba(35, 37, 36, 0.7803921569);
+}
+@keyframes anim {
+  to {
+    -webkit-clip-path: circle(141.4% at 0 100%);
+            clip-path: circle(141.4% at 0 100%);
+  }
 }
 .mainbody .sComments {
   margin-top: 4rem;
@@ -200,15 +236,26 @@
   font-weight: bold;
   text-transform: uppercase;
   padding-right: 1.5rem;
+  display: block;
 }
 .mainbody .sComments span:nth-child(2) {
-  padding-left: 1.5rem;
+  color: grey;
+  font-size: 16px;
+  display: block;
+}
+.mainbody .sComments span:nth-child(3) {
+  padding-top: 1rem;
+  font-size: 20px;
+  display: block;
 }
 
 @media only screen and (min-width: 600px) {
   .mainbody h1 {
     margin-top: 4rem;
     font-size: 40px;
+  }
+  .mainbody .main {
+    padding: 0 1rem;
   }
   .mainbody .main .ph2 {
     font-size: 25px;
@@ -225,17 +272,16 @@
     top: 8%;
     left: 2%;
   }
-  .mainbody .wComment form .name:not(:-ms-input-placeholder).name:not(:focus) ~ .nameT, .mainbody .wComment form .email:not(:-ms-input-placeholder).email:not(:focus) ~ .emailT {
-    top: 8%;
-    left: 2%;
-  }
   .mainbody .wComment form .name:focus ~ .nameT, .mainbody .wComment form .name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
-.mainbody .wComment form .email:focus ~ .emailT, .mainbody .wComment form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
+  .mainbody .wComment form .email:focus ~ .emailT, .mainbody .wComment form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
     top: 8%;
     left: 2%;
   }
 }
 @media only screen and (min-width: 870px) {
+  .mainbody .main {
+    padding: 0 2rem;
+  }
   .mainbody .main img {
     height: 300px;
   }

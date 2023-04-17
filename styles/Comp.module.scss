@@ -189,7 +189,7 @@ $color: (
             transform: rotate(-45deg);
           }
           .link, div:nth-child(1){
-            background: #fffae3;
+            background: #ffcc3e;
             margin: 0.5rem 0;
           }
         .link{
@@ -225,7 +225,7 @@ $color: (
     .container{
     color: map-get($color, col-white);
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     display: grid;
     text-align: center;
     padding: 5px 0;
@@ -234,8 +234,7 @@ $color: (
     max-width: 1150px;
     margin: auto;
 
-    .link{
-        text-decoration: none;
+    a{
         color: map-get($color, col-white);
     }
 
@@ -246,7 +245,7 @@ $color: (
             .container{
                 color: map-get($color, col-white);
                 text-transform: uppercase;
-                font-size: 10px;
+                font-size: 12px;
                 display: flex;
                 justify-content: space-between;
                 padding: 1.5rem;
@@ -259,3 +258,24 @@ $color: (
                 }
         }
 }
+
+/* t and c page*/
+
+.basicInfoPage{
+    max-width: 1080px;
+    font-size: 16px;
+    margin: 1rem auto;
+    line-height: 32px;
+    h2{
+        margin: 1.5rem 0;
+        color: #F34213;
+    }
+    h1{
+        margin: 1rem 0;
+        color: #F34213;
+    }
+    li{
+        margin-left: 1rem;
+    }
+}
+

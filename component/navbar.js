@@ -50,7 +50,7 @@ const Navbar = () => {
       <div className={`${styles.container} ${styles.navMob}`}>
         <div className={styles.leftnav}>
           <Link href="/">
-            <img src="/logo.png" alt="Logo" />
+            <img src="/logo.svg" alt="Logo" />
           </Link>
         </div>
 
@@ -68,27 +68,27 @@ const Navbar = () => {
                 </a>
               </Link>
               <div className={`${styles.dropdowncontent} `}>
-                <Link href="/news">
+                {/* <Link href="/news">
                   <a className={styles.link}>News</a>
-                </Link>
+                </Link> */}
                 <Link href="/philosophy">
                   <a className={styles.link}>Philosophy</a>
                 </Link>
-                <Link href="/goverment schemes">
-                  <a className={styles.link}>Goverment Schemes</a>
+                <Link href="/government schemes">
+                  <a className={styles.link}>Government Schemes</a>
                 </Link>
-                <Link href="/finance %26 economy">
+                {/* <Link href="/finance %26 economy">
                   <a className={styles.link}>Finance/ Economy</a>
-                </Link>
+                </Link> */}
                 <Link href="/english">
                   <a className={styles.link}>English</a>
                 </Link>
-                <Link href="/geography">
+                {/* <Link href="/geography">
                   <a className={styles.link}>Geography</a>
-                </Link>
-                <Link href="/history">
+                </Link> */}
+                {/* <Link href="/history">
                   <a className={styles.link}>History</a>
-                </Link>
+                </Link> */}
                 <Link href="/astrology %26 mythology">
                   <a className={styles.link}>Astrology/ Mythology</a>
                 </Link>
@@ -115,35 +115,35 @@ const Navbar = () => {
             <a onClick={menu}className={styles.link}>Home</a>
           </Link>
       <div className={styles.dropdown}>
-           <div> <Link href="/blogs">
-              <a onClick={menu}>
+           <div onClick={dropdown}> <Link href="/blogs">
+              <a onClick={menu} style={{'zIndex': 1}}>
                 Blogs 
               </a>
             </Link>
-            <i onClick={dropdown} className={ddBtn}></i>
+            <i  className={ddBtn}></i>
             </div>
             <div className={dropDon}>
-              <Link href="/news">
+              {/* <Link href="/news">
                 <a onClick={menu}className={styles.link}>News</a>
-              </Link>
+              </Link> */}
               <Link href="/philosophy">
                 <a onClick={menu}className={styles.link}>Philosophy</a>
               </Link>
-              <Link href="/goverment schemes">
-                <a onClick={menu}className={styles.link}>Goverment Schemes</a>
+              <Link href="/government schemes">
+                <a onClick={menu}className={styles.link}>Government Schemes</a>
               </Link>
-              <Link href="/finance %26 economy">
+              {/* <Link href="/finance %26 economy">
                 <a onClick={menu}className={styles.link}>Finance/ Economy</a>
-              </Link>
+              </Link> */}
               <Link href="/english">
                 <a onClick={menu}className={styles.link}>English</a>
               </Link>
-              <Link href="/geography">
+              {/* <Link href="/geography">
                 <a onClick={menu}className={styles.link}>Geography</a>
-              </Link>
-              <Link href="/history">
+              </Link> */}
+              {/* <Link href="/history">
                 <a className={styles.link}>History</a>
-              </Link>
+              </Link> */}
               <Link href="/astrology %26 mythology">
                 <a onClick={menu}className={styles.link}>Astrology/ Mythology</a>
               </Link>

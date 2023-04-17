@@ -12,44 +12,41 @@
 .hero .left p:nth-child(1) {
   text-transform: uppercase;
   color: #8d8d8d;
-  font-size: 10px;
+  font-size: 16px;
   letter-spacing: 0.15rem;
   margin-bottom: 0.5rem;
 }
 .hero .left h1 {
   text-transform: uppercase;
-  font-size: 30px;
-  margin-bottom: 0.5rem;
+  font-size: 36px;
+  margin-bottom: 1rem;
 }
 .hero .left h1 span {
   color: #f34213;
   font-weight: bolder;
 }
 .hero .left p:nth-child(3) {
-  font-size: 10px;
+  font-size: 18px;
   color: #8d8d8d;
-  margin-bottom: 8em;
+  margin-bottom: 4em;
 }
 .hero .left .content {
   margin-bottom: 3rem;
 }
 .hero .left a {
-  font-size: 10px;
+  font-size: 16px;
   font-weight: bold;
   background: #15141d;
   color: #efefef;
-  border-radius: 2rem;
+  border-radius: 1rem;
   padding: 1.5rem 1.5rem;
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
-  box-shadow: 0 0 5px rgb(0, 0, 0);
+  box-shadow: 1px 2px 6px rgba(33, 33, 33, 0.3843137255);
   transition: all 0.3s ease-in-out;
-  -webkit-animation: anim 2s infinite;
-          animation: anim 2s infinite;
+  animation: anim 2s infinite;
 }
-@-webkit-keyframes anim {}
-@keyframes anim {}
 .hero .left a:hover {
   background: #ff8c00;
   color: #15141d;
@@ -99,15 +96,16 @@
   margin: auto;
   padding: 0 1em;
 }
-.section1 .sec1cont h1 {
-  font-size: 28px;
+.section1 .sec1cont h2 {
+  font-size: 36px;
   padding-top: 9rem;
   text-transform: uppercase;
   color: #efefef;
 }
 .section1 .sec1cont hr:nth-child(2) {
-  width: 120px;
+  width: 100px;
   margin: auto;
+  text-align: center;
 }
 .section1 .sec1cont .perkscont {
   display: flex;
@@ -123,9 +121,10 @@
   box-shadow: 1px 1px 10px #131313;
   color: #3e2f5b;
   background: #efefef;
+  transition: 0.3s;
 }
 .section1 .sec1cont .perkscont .perks h4 {
-  font-size: 15px;
+  font-size: 18px;
   text-transform: uppercase;
   text-align: center;
   padding: 2rem 0 0.5rem 0;
@@ -137,15 +136,11 @@
   margin-bottom: 1.5rem;
 }
 .section1 .sec1cont .perkscont .perks p {
-  font-size: 10px;
+  font-size: 16px;
   color: #515151;
-  transition: all 0.3s ease-in-out;
 }
-.section1 .sec1cont .perkscont .perks:hover h4 {
-  font-size: 25px;
-}
-.section1 .sec1cont .perkscont .perks:hover p {
-  font-size: 14px;
+.section1 .sec1cont .perkscont .perks:hover {
+  transform: scale(1.1);
 }
 
 .section2 {
@@ -157,10 +152,10 @@
   margin-top: 2.5em;
   padding: 0 1rem;
 }
-.section2 h1 {
+.section2 h2 {
   text-transform: uppercase;
   color: #3e2f5b;
-  font-size: 28px;
+  font-size: 36px;
   margin-bottom: 0.25rem;
 }
 .section2 hr {
@@ -200,7 +195,7 @@
 .section2 form label {
   font-weight: bold;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 1rem;
   position: absolute;
   transition: 0.3s ease-in-out;
 }
@@ -217,11 +212,6 @@
   left: 3%;
   font-size: 0.6rem;
 }
-.section2 form .name:not(:-ms-input-placeholder).name:not(:focus) ~ .nameT, .section2 form .email:not(:-ms-input-placeholder).email:not(:focus) ~ .emailT {
-  top: 25%;
-  left: 3%;
-  font-size: 0.6rem;
-}
 .section2 form .name:focus ~ .nameT, .section2 form .name:not(:placeholder-shown).name:not(:focus) ~ .nameT,
 .section2 form .email:focus ~ .emailT, .section2 form .email:not(:placeholder-shown).email:not(:focus) ~ .emailT {
   top: 25%;
@@ -229,10 +219,6 @@
   font-size: 0.6rem;
 }
 .section2 form .comment:not(:-moz-placeholder-shown).comment:not(:focus) ~ .commentT {
-  top: 0%;
-  font-size: 0.6rem;
-}
-.section2 form .comment:not(:-ms-input-placeholder).comment:not(:focus) ~ .commentT {
   top: 0%;
   font-size: 0.6rem;
 }
@@ -273,6 +259,9 @@
   background: #f5c500;
   padding: 7rem 0.25rem;
   border-radius: 20px;
+  -webkit-clip-path: circle(3.3% at 0 100%);
+          clip-path: circle(3.3% at 0 100%);
+  animation: anim 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) both;
   margin-bottom: 2rem;
 }
 .section2 .onsub h2 {
@@ -281,7 +270,7 @@
   color: #000f08;
 }
 .section2 .onsub p {
-  font-size: 15px;
+  font-size: 16px;
   margin-top: 0.7rem;
   color: rgba(35, 37, 36, 0.7803921569);
 }
@@ -290,6 +279,12 @@
   visibility: hidden;
 }
 
+@keyframes anim {
+  to {
+    -webkit-clip-path: circle(141.4% at 0 100%);
+            clip-path: circle(141.4% at 0 100%);
+  }
+}
 .section3 {
   text-align: center;
   background: #f34213;
@@ -304,10 +299,11 @@
   flex-direction: column;
   color: #efefef;
 }
-.section3 .container h1 {
-  padding-top: 8rem;
+.section3 .container h2 {
+  padding-top: 10rem;
   text-transform: uppercase;
   color: #efefef;
+  font-size: 36px;
 }
 .section3 .container hr {
   width: 70px;
@@ -362,17 +358,17 @@
     max-width: 51vw;
   }
   .hero .container .left p:nth-child(1) {
-    font-size: 12px;
+    font-size: 16px;
     letter-spacing: 0.15rem;
   }
   .hero .container .left h1 {
     font-size: 35px;
   }
   .hero .container .left p:nth-child(3) {
-    font-size: 12px;
+    font-size: 18px;
   }
   .hero .container .left a {
-    font-size: 12px;
+    font-size: 16px;
   }
   .hero .container .right {
     align-items: center;
@@ -387,29 +383,29 @@
     z-index: -1;
   }
   .hero .container .right img:nth-child(1) {
-    right: 30%;
-    bottom: 20%;
+    right: 20%;
+    bottom: 50%;
   }
   .hero .container .right img:nth-child(2) {
-    right: 40%;
-    top: 19%;
+    right: 48%;
+    top: 29%;
   }
   .hero .container .right .list {
-    max-width: 20vw;
     border-radius: 30px;
+    max-width: 20vw;
   }
   .hero .container .right .list .listitems {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .hero .container .right .list hr {
     max-width: 2rem;
   }
   .hero .container .right .list p {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0.2rem 0;
+    margin: 0.2rem 0;
   }
-
-  .section1 .sec1cont h1 {
+  .section1 .sec1cont h2 {
     text-align: right;
   }
   .section1 .sec1cont hr:nth-child(2) {
@@ -434,7 +430,7 @@
     font-size: 43px;
   }
   .hero .container .left p:nth-child(3) {
-    font-size: 12px;
+    font-size: 16px;
     max-width: 90%;
   }
   .hero .container .left a {
@@ -453,39 +449,33 @@
   }
   .hero .container .right .list {
     position: relative;
-    right: -30%;
+    right: -20%;
     max-width: 25vw;
   }
   .hero .container .right .list .listitems {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
   }
   .hero .container .right .list hr {
     max-width: 2rem;
   }
   .hero .container .right .list p {
-    font-size: 0.7rem;
+    font-size: 1rem;
     padding: 0.4rem 0;
-  }
-
-  .section1 .sec1cont h1 {
-    font-size: 42px;
   }
   .section1 .sec1cont .perkscont {
     padding: 5rem 0;
   }
   .section1 .sec1cont .perkscont .perks {
-    max-width: 239px;
-    padding: 5rem 1rem;
+    max-width: 280px;
+    padding: 4rem 1rem;
   }
   .section1 .sec1cont .perkscont .perks h4 {
     font-size: 20px;
   }
   .section1 .sec1cont .perkscont .perks p {
-    font-size: 12px;
+    font-size: 16px;
   }
-
-  .section2 h1 {
-    font-size: 42px;
+  .section2 h2 {
     text-align: left;
   }
   .section2 hr {
@@ -500,16 +490,12 @@
     min-width: 55%;
   }
   .section2 .container .leftsec2 form input:nth-child(1),
-.section2 .container .leftsec2 form input:nth-child(2),
-.section2 .container .leftsec2 form input:nth-child(3), .section2 .container .leftsec2 form textarea {
+  .section2 .container .leftsec2 form input:nth-child(2),
+  .section2 .container .leftsec2 form input:nth-child(3), .section2 .container .leftsec2 form textarea {
     padding: 1rem 1rem;
     margin: 2rem 1rem;
   }
   .section2 .container .leftsec2 form .comment:not(:-moz-placeholder-shown).comment:not(:focus) ~ .commentT {
-    top: 10%;
-    font-size: 0.6rem;
-  }
-  .section2 .container .leftsec2 form .comment:not(:-ms-input-placeholder).comment:not(:focus) ~ .commentT {
     top: 10%;
     font-size: 0.6rem;
   }
@@ -527,14 +513,12 @@
     display: block;
     visibility: visible;
   }
-
   .section3 {
     -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%, 50% 20%);
             clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%, 50% 20%);
   }
-  .section3 .container h1 {
+  .section3 .container h2 {
     padding-top: 12rem;
-    font-size: 42px;
   }
   .section3 .container .subcont {
     margin-bottom: 4rem;

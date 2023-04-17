@@ -148,7 +148,7 @@
     transform: rotate(-45deg);
   }
   .mobNav.navopen .link, .mobNav.navopen div:nth-child(1) {
-    background: #fffae3;
+    background: #ffcc3e;
     margin: 0.5rem 0;
   }
   .mobNav.navopen .link {
@@ -177,7 +177,7 @@
 .footer .container {
   color: white;
   text-transform: uppercase;
-  font-size: 10px;
+  font-size: 12px;
   display: grid;
   text-align: center;
   padding: 5px 0;
@@ -186,15 +186,14 @@
   max-width: 1150px;
   margin: auto;
 }
-.footer .container .link {
-  text-decoration: none;
+.footer .container a {
   color: white;
 }
 @media only screen and (min-width: 600px) {
   .footer .container {
     color: white;
     text-transform: uppercase;
-    font-size: 10px;
+    font-size: 12px;
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
@@ -202,4 +201,23 @@
     margin: auto;
     font-size: 0.8rem;
   }
+}
+
+/* t and c page*/
+.basicInfoPage {
+  max-width: 1080px;
+  font-size: 16px;
+  margin: 1rem auto;
+  line-height: 32px;
+}
+.basicInfoPage h2 {
+  margin: 1.5rem 0;
+  color: #F34213;
+}
+.basicInfoPage h1 {
+  margin: 1rem 0;
+  color: #F34213;
+}
+.basicInfoPage li {
+  margin-left: 1rem;
 }/*# sourceMappingURL=Comp.module.css.map */

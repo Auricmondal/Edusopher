@@ -6,9 +6,13 @@ import PortableText  from 'react-portable-text'
 import {useForm, SubmitHandler} from "react-hook-form"
 import { useState } from 'react';
 import styles from '../../styles/blog.module.css'
+import { v4 as uuidv4 } from 'uuid';
+import CommentS from '../../component/Comments'
+
 
 interface IFormInput{
   _id:string;
+  _idC:string;
   name:string;
   email:string;
   comment: string;
@@ -16,26 +20,31 @@ interface IFormInput{
 
 interface Props{
   posts : Posts;
+  
 }
 
 const Slug = ({posts}: Props) => {
-
   
  const [submitted, setSubmitted]= useState(false)
   const {register, handleSubmit, formState:{errors},}= useForm<IFormInput>();
-const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
-  await fetch('/api/createComment',{
-    method:'POST',
-    body:JSON.stringify(data)
-  }).then(()=>{
-      // console.log(data);
-      setSubmitted(true)
-      
-  }).catch((err)=>{
-      console.log(err)
-      setSubmitted(false)
-  })
-};
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzkxvY-zzDDW8FFkbzTvpwhK-K0Xs7-xPo3fCc8yYjZwwTII5yo4yObvSsZ88yDgyFM/exec'
+
+
+  const onSubmit: SubmitHandler<IFormInput> = (e) => {
+    
+  const form = document.forms['comment']
+  
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+   .then(() => {
+       
+        setSubmitted(true);
+      })
+      .catch((err) => {
+        console.log(err);
+        setSubmitted(false);
+      });
+    
+  };
 
     const toUpFirst=(name) =>{
         if(name)
@@ -49,6 +58,7 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
 
     <div className="content">
       <div className="index"></div>
+      
       <div className={styles.mainbody}>
       {posts.mainImage && <img className={styles.mainimg} src={
                 urlFor(posts.mainImage).url()
@@ -89,11 +99,17 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
                           Bullet:({chlidren}: any)=>(
                             <li className={styles.pli} >{chlidren}</li>
                           ),
-                          link:({href, chlidren}: any)=>(
+                          url:({href, chlidren}: any)=>(
                             <a className={styles.pa} href={href} >{chlidren}</a>
                           ),
                           normal:(props:any)=>(
                             <p className={styles.pp} {...props}/>
+                          ),
+                          emphasis:(props:any)=>(
+                            <p className={styles.pe} {...props}/>
+                          ),
+                          quote:(props:any)=>(
+                            <blockquote className={styles.pq} {...props}/>
                           )
                         }
 
@@ -107,11 +123,12 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
           {submitted?(
             <div className={styles.onsub}>
               <h2>Submitted Successfully!</h2>
-              <p>The Comment Will Appear after Approval</p>
+              <p>Thank Your For Your Valuable Effort!</p>
             </div>
           ):
-        (<form onSubmit={handleSubmit(onSubmit)} >
+        (<form onSubmit={handleSubmit(onSubmit)} name="comment">
         <input  {...register("_id")} type="hidden" name='_id' value={posts._id}/>
+        <input  {...register("_idC")} type="hidden" name='_idC' value={`${uuidv4()}`}/>
        <div> 
          <input className={styles.name} {...register("name")} required placeholder=" " type="text" name="name" id="name" />
         <label className={styles.nameT} htmlFor="name">Name</label>
@@ -128,22 +145,12 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
       </form>)}
       </div>
           
-          {/* Comments */}
-          <main className={styles.sComments}>
-            <h3>Comments</h3>
-            <hr />
-            
-            {posts.comments&&(posts.comments.map((comment)=>(
-              <div>
-                <p><span>{comment.name}</span>: <span>{comment.comment}</span></p>
-                <hr />
-              </div>
-            )))}
-          </main>
-            
+          
+          
+            <CommentS _id={posts._id}/>
       </div>
+
     </div>
-    
     </>
     );
   }
@@ -155,9 +162,8 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
       slug,
      } `;
   
-  
+     
     const posts=  await sanityClient.fetch(query);
-  
      const paths = posts.map((posts: Posts)=>({
        params:{
          slug: posts.slug.current,
@@ -180,7 +186,6 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
           name,
           image
         },
-        'comments':*[_type == "comment" && post._ref==^._id && approved==true],
         description,
         slug,
         mainImage,
@@ -199,6 +204,9 @@ const onSubmit : SubmitHandler<IFormInput>= async(data)=>{
         return {
           props: {
             posts,
+            
           },
+
+          revalidate: 25200,
         }
         }
