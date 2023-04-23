@@ -24,6 +24,12 @@ export default {
       options: {
         hotspot: true,
       },
+      fields:[{
+        name:'alt',
+        type:'string',
+        title:'Alternative Text',
+        validation: Rule => Rule.required().max(125)
+      },],
     },
     {
       name: 'bio',

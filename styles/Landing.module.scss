@@ -20,8 +20,8 @@ $color: (
   max-width: 1150px;
   margin: auto;
   text-align: center;
-  margin-top: 2.5em;
   padding:0 1em;
+  padding-top: 6rem;
   .container{
     display: flex;
     flex-direction: column;
@@ -349,6 +349,8 @@ $color: (
 
   .leftsec3{
     .avatar{
+      border-radius:50%;
+      object-fit: cover;
       max-width: 50%;
     }
     .icons{

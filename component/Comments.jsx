@@ -3,7 +3,7 @@ import styles from '../styles/blog.module.css'
 
 
 const comments = (props) => {
-  const _id= props._id;
+  const {_id}= props;
 // console.log(getComments(_id).then((a)))
 
 useEffect(() => {

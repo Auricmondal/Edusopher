@@ -2,8 +2,8 @@
   max-width: 1150px;
   margin: auto;
   text-align: center;
-  margin-top: 2.5em;
   padding: 0 1em;
+  padding-top: 6rem;
 }
 .hero .container {
   display: flex;
@@ -311,6 +311,9 @@
   margin-bottom: 2rem;
 }
 .section3 .container .leftsec3 .avatar {
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
   max-width: 50%;
 }
 .section3 .container .leftsec3 .icons {

@@ -23,8 +23,9 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
-  ],
+    "**/*.tsx",
+    "**/*.jsx"
+, "component/blogs/tags.jsx", "component/blogs/blogCard.jsx", "pages/[slug].jsx", "pages/blogs.jsx", "pages/blogs/[slug].jsx", "component/blog/wcomments.tsx", "sections/about.jsx"  ],
   "exclude": [
     "node_modules"
   ]
