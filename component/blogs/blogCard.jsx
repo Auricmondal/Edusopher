@@ -14,7 +14,7 @@ const blogCard = ({post}=props) => {
         <div className={stylesBlogs.cardMainImg}>
           <Image
             src={post.mainImage?urlFor(post.mainImage).url():'/demoimg.jpg'}  
-            alt={post.mainImage.alt?post.mainImage.alt:null}
+            alt={post.mainImage && post.mainImage.alt?post.mainImage.alt:''}
             width={1000}
             height={600}
             className={stylesBlogs.mainimg}

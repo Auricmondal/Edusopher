@@ -9,12 +9,11 @@ import Head from 'component/head';
 
 
 const Slug = ({posts,relArt}=props) => {
-  console.log(posts.mainImage.alt);
     return (<>
     <Head title={posts.title} metadesc={posts.metadesc} ogImg={posts.mainImage}/>
     <div className={stylesBlog.blog}>
         <div className={stylesBlog.mainImgCont}>
-        <Image src={posts.mainImage?urlFor(posts.mainImage).url():'/demoimg.jpg'} alt={posts.mainImage.alt?posts.mainImage.alt:null} width={1000} height={1000} quality={100}/>
+        <Image src={posts.mainImage?urlFor(posts.mainImage).url():'/demoimg.jpg'} alt={posts.mainImage && posts.mainImage.alt?posts.mainImage.alt:null} width={1000} height={1000} quality={100}/>
         </div>
           <Sectionui type={'index'} posts={posts}/>
         <div className={stylesBlog.mainAndAds}>

@@ -28,6 +28,7 @@ export default {
         name:'alt',
         type:'string',
         title:'Alternative Text',
+        initialValue:'This is an alt text',
         validation: Rule => Rule.required().max(125)
       },],
     },
