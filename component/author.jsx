@@ -5,9 +5,11 @@ import Image from 'next/image';
 const author = ({post}=props) => {
   return (
     <div className={stylesComp.authorInfo}>
-      <Image width={40} height={40} className={stylesComp.authorimg} src={
+      <div className={stylesComp.autimgCont}>
+      <Image  layout='fill' className={stylesComp.authorimg} src={
                   urlFor(post.author.image).url()
                 }  alt="" />
+      </div>
       <div>
       <h4>{post.author.name}</h4>
       <p>Published on {new Date(post._createdAt).toLocaleDateString("en-GB", {

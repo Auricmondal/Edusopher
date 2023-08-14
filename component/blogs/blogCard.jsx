@@ -8,15 +8,16 @@ import Author from "../author";
 
 
 const blogCard = ({post}=props) => {
+  const newDesc=post.metadesc?.slice(0,30)
   return (
     <Link key={post._id} href={`/blogs/${post.slug.current}`}>
       <div className={stylesBlogs.blogCard}>
         <div className={stylesBlogs.cardMainImg}>
           <Image
-            src={post.mainImage?urlFor(post.mainImage).url():'/demoimg.jpg'}  
+            src={post.mainImage? (urlFor(post.mainImage).url()):'/demoimg.webp'}  
             alt={post.mainImage && post.mainImage.alt?post.mainImage.alt:''}
-            width={1000}
-            height={600}
+            width={600}
+            height={200}
             className={stylesBlogs.mainimg}
           />
         </div>
@@ -27,7 +28,7 @@ const blogCard = ({post}=props) => {
       </div>
       <div className={stylesBlogs.cardcont}>
         <h3>{post.title}</h3>
-        <p className={stylesBlogs.desc}>Sunt aspernatur perspiciatis! Repudiandae neque tempora esse consequuntu...</p>
+        <p className={stylesBlogs.desc}>{newDesc}</p>
       </div>
       <div className={stylesBlogs.bottomSec} >
       <Author post={post}/>

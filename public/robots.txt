@@ -1,4 +1,9 @@
+# *
 User-agent: *
 Allow: /
 
-Sitemap: https://edusopher.com/mysitemap
+# Host
+Host: https://edusopher.com
+
+# Sitemaps
+Sitemap: https://edusopher.com/sitemap.xml

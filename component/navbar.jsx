@@ -4,7 +4,8 @@ import React, { useState } from "react";
 import Link from "next/link";
 import stylesComp from "/styles/Comp.module.css";
 import Image from "next/image";
-import HamburgerMenu from "./hamburgerMenu";
+import dynamic from 'next/dynamic'
+const HamburgerMenu = dynamic(() => import('./hamburgerMenu'))
 
 const Navbar = () => {
   const [hamCheck, setHamCheck] = useState(false)
@@ -22,17 +23,17 @@ const Navbar = () => {
       </ul >
       <ul className={stylesComp.rightNav}>
         <li>
-            <Link href="/">
-              <a className={stylesComp.link}>Home</a>
+            <Link href="/" className={stylesComp.link}>
+             Home
             </Link>
         </li>
         
         <li className={stylesComp.dropdown}>
         
               <Link href="/blogs">
-                <a>
+                
                   Blogs <i className={stylesComp.arrow}></i>
-                </a>
+                
               </Link>
               <ul className={`${stylesComp.dropdowncontent}`}>
                 
@@ -43,6 +44,7 @@ const Navbar = () => {
                 <li><Link href="/english" className={stylesComp.link}>English</Link></li>
                 {/* <li><Link href="/geography" className={stylesComp.link}>Geography</Link></li> */}
                 {/* <li><Link href="/history" className={stylesComp.link}>History</Link></li> */}
+                <li><Link href="/dream dictionary" className={stylesComp.link}>Dream Dictonary</Link></li>
                 <li><Link href="/astrology %26 mythology" className={stylesComp.link}>Astrology/ Mythology</Link></li>
               </ul>
             

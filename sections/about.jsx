@@ -2,6 +2,13 @@ import React from 'react'
 import styles from "../styles/Landing.module.css";
 import Image from 'next/image';
 import { urlFor } from '../sanity'
+import {PortableText} from '@portabletext/react'
+
+const serelizers={
+  normal:(props=any)=>(
+    <p  {...props}/>
+  ),
+}
 
 
 const about = ({ data }=props) => {
@@ -21,35 +28,31 @@ const about = ({ data }=props) => {
                   href="https://instagram.com/edusopher?igshid=ZDdkNTZiNTM="
                   target="_blank" rel="noreferrer"
                 >
-                  <img src="/insta.svg" className={styles.insta} />
+                  <Image height={30} width={20} src="/insta.svg" className={styles.insta} />
                 </a>
                 <p>|</p>
                 <a
                   href="https://www.facebook.com/edusopher?mibextid=ZbWKwL"
                   target="_blank" rel="noreferrer"
                 >
-                  <img src="/fb.svg" className={styles.fb} />
+                  <Image height={30} width={10} src="/fb.svg" className={styles.fb} />
                 </a>
                 <p>|</p>
                 <a
                   href="mailto:edusopher@gmail.com"
                   target="_blank" rel="noreferrer"
                 >
-                  <img src="/email.svg" className={styles.email} />
+                  <Image height={30} width={20} src="/email.svg" className={styles.email} />
                 </a>
               </div>
             </div>
             <div className={styles.rightsec3}>
               <div>
-               <p>Welcome to Edusopher Family!!!</p> <br />
-               <p> Edusopher is an educational channel that introduce the
-                confluence of knowledge and wisdom.We believe in sharing
-                knowledge and our motto is &quot;SHARING KNOWLEDGE TO GAIN
-                PROSPERITY&quot;. </p>
-                This channel serving you a full plate of knowledgeable and
-                interesting topics,summery of books and many more, what you want
-                to know.If you want to dive into the sea of knowledge and become
-                an important member of our Edusopher family.
+              <PortableText 
+                value={data.bio}
+                components={serelizers}
+          
+            />
               </div>
             </div>
           </div>

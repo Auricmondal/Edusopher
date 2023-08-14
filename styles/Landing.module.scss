@@ -87,16 +87,18 @@ $color: (
   img{
     display:none;
     visibility: hidden;
+    max-width: 100%;
+    aspect-ratio: 47/60 !important;
   }
   .list{
-    z-index: 100;
-    box-shadow: 0 0 2px ;
-    max-width: 59vw;
+    aspect-ratio: 107/100;
+    height: 200px;
+    max-width: 100%;
     margin: auto;
     text-align: left;
     background: map-get($color, col-blue);
     padding: 30px;
-    border-radius: 50px;
+    border-radius: 20px;
     box-shadow: 0 0 7px rgba(53, 53, 53, 0.603);
     color: map-get($color, col-white);
     .listitems{
@@ -109,7 +111,10 @@ $color: (
               max-width: 7rem;
               text-align: center;
             }
-            p{
+            li:nth-child(1){
+              padding-top: 1rem;
+            }
+            li{
               padding: 0.5rem 0;
             }
 
@@ -352,6 +357,7 @@ $color: (
       border-radius:50%;
       object-fit: cover;
       max-width: 50%;
+      
     }
     .icons{
       max-width: 100px;
@@ -368,11 +374,7 @@ $color: (
       }
       
     }
-    p{
-      display: flex;
-      align-items: center;
-      
-    }
+    
 
   }
   .rightsec3{
@@ -381,6 +383,8 @@ $color: (
     p{
       margin-bottom: 2rem;
       line-height: 1.5rem;
+      font-size: 24px;
+      text-align: left;
     }
   }
 
@@ -442,6 +446,7 @@ $color: (
         }
         .list{
           border-radius: 30px;
+          min-height: 250px;
           max-width: 20vw;
           .listitems{
             font-size: 1.1rem;
@@ -518,6 +523,7 @@ $color: (
         .list{
           position: relative;
           right: -20%;
+          min-height: 200px;
           max-width: 25vw;
           .listitems{
             font-size: 1.1rem
@@ -597,12 +603,14 @@ $color: (
     .rightsec2{
       display: block;
       visibility: visible;
+      position: relative;
+      width: 100%;
+      margin-left: 1rem;
     }}
   }
 
   //About
   .section3{
-    clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%, 50% 20%);
     .container{
       
       h2{
@@ -610,15 +618,12 @@ $color: (
       }
       .subcont{
         margin-bottom: 4rem;
-        display: flex;
-        flex-direction: row;
+        
         .leftsec3{
           min-width: 40%;
           
         }
-        .rightsec3{
-          text-align: left;
-        }
+        
       }
     }
   }

@@ -52,10 +52,9 @@ export default {
       
       fields:[{
         name:'alt',
-        type:'text',
+        type:'string',
         title:'Alternative Text',
-        initialValue:'This is an alt text',
-        validation: Rule => Rule.max(125)
+        validation: Rule => Rule.required().max(125)
       },],
     },
     {

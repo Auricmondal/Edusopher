@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styles from "../styles/Landing.module.css";
 import { useForm, SubmitHandler } from "react-hook-form";
+import Image from 'next/image';
 
 
 interface IFormInput {
@@ -98,7 +99,7 @@ const Landing = () => {
             )}
           </div>
           <div className={styles.rightsec2}>
-            <img src="/aboutanim.svg" alt="this is a photo" />
+            <Image  layout="fill" src="/aboutanim.svg" alt="this is a photo" />
           </div>
         </div>
       </div>

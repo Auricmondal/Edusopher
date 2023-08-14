@@ -1,14 +1,14 @@
 import Link from 'next/link'
 import React from 'react'
 import styles from "../styles/Landing.module.css";
+import Image from 'next/image';
 const hero = () => {
   return (
     <>
      {/* The elements of Hero Section is here */}
-     <header className={styles.hero}>
+     <section className={styles.hero}>
         <div className={styles.container}>
           {/* Left Part of the Hero section goes here */}
-
           <div className={styles.left}>
             <p>Recreating The Habit of Reading </p>
             <h1>
@@ -22,60 +22,63 @@ const hero = () => {
             </p>
             <div className={styles.content}>
               <Link href="/blogs">
-                <a>Let&apos;s Gets Started !</a>
+                Let&apos;s Gets Started !
               </Link>
             </div>
           </div>
+          
           {/* Right Part of the Hero section goes here */}
 
           <div className={styles.right}>
-            <img src="/Herophoto1.png" alt="This is a photo" />
-            <img src="/Herophoto2.png" alt="This is a photo" />
-
+          <img src="/Herophoto1.webp" alt="edusopher.com homepage taken from unsplash"  />
+            <img src="/Herophoto2.webp" alt="edusopher.com homepage taken from unsplash" />
             {/* The table for WE GOT YOU COVERD GOES HERE */}
-            <div className={styles.list}>
+            <div className={styles.list} width={274}>
               <h3 className={styles.listitems}>We got you covered</h3>
               <hr />
-              {/* <p>
+
+              <ul>
+              {/* <li>
                 <embed src="/tick.svg" type="" />
                 News
-              </p> */}
-              <p>
+              </li> */}
+              <li>
                 <embed src="/tick.svg" type="" />
                 Philosophy{" "}
-              </p>
-              <p>
+              </li>
+              <li>
                 <embed src="/tick.svg" type="" />
                 Government Schemes{" "}
-              </p>
-              {/* <p>
+              </li>
+              {/* <li>
                 <embed src="/tick.svg" type="" />
                 Finance/ Economy
-              </p> */}
-              <p>
+              </li> */}
+              <li>
                 <embed src="/tick.svg" type="" />
                 English
-              </p>
-              {/* <p>
+              </li>
+              {/* <li>
                 <embed src="/tick.svg" type="" />
                 Geography
-              </p> */}
-              {/* <p>
+              </li> */}
+              {/* <li>
                 <embed src="/tick.svg" type="" />
                 History
-              </p> */}
-              <p>
+              </li> */}
+              <li>
                 <embed src="/tick.svg" type="" />
                 Astrology / Mythology
-              </p>
-              <p>
+              </li>
+              <li>
                 <embed src="/tick.svg" type="" />
                 More Coming Soon
-              </p>
+              </li>
+              </ul>
             </div>
           </div>
         </div>
-      </header>
+      </section>
     </>
   )
 }

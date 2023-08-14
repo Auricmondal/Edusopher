@@ -1,3 +1,6 @@
+import React from "react"
+
+
 /**
  * This is the schema definition for the rich text fields used for
  * for this blog studio. When you import it in schemas.js it can be
@@ -26,9 +29,11 @@ export default {
         {title: 'H2', value: 'h2'},
         {title: 'H3', value: 'h3'},
         {title: 'H4', value: 'h4'},
+        {title: 'H5', value: 'h5'},
+        {title: 'H6', value: 'h6'},
         {title: 'Quote', value: 'blockquote'},
       ],
-      lists: [{title: 'Bullet', value: 'bullet'}],
+      lists: [{title: 'Bullet', value: 'bullet'},{title: 'Numbered', value: 'number'}],
       // Marks let you mark up inline text in the block editor.
       marks: {
         // Decorators usually describe a single property – e.g. a typographic
@@ -47,7 +52,7 @@ export default {
             type: 'object',
             fields: [
               {
-                title: 'URL',
+                title: 'External Link',
                 name: 'href',
                 type: 'url',
               },
@@ -58,11 +63,14 @@ export default {
                 type: 'boolean'
               }
             ],
+            blockEditor:{
+              icon:()=><div>🌎</div>
+            },
           },
           {
             name: 'internalLink',
             type: 'object',
-            title: 'Internal link',
+            title: 'Internal Link',
             fields: [
               {
                 name: 'reference',
@@ -70,10 +78,12 @@ export default {
                 title: 'Reference',
                 to: [
                   { type: 'post' },
-                  // other types you may want to link to
                 ]
               }
             ],
+            blockEditor:{
+              icon:()=><div>🔗</div>
+            },
             
           }
         ],
@@ -92,7 +102,7 @@ export default {
         type:'string',
         title:'Alternative Text',
         initialValue:'This is an alt text',
-        validation: Rule => Rule.max(125)
+        validation: Rule => Rule.required().max(125)
       },],
     },
   ],

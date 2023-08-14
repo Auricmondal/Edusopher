@@ -27,9 +27,11 @@
   padding: 0.5rem;
   position: relative;
   cursor: pointer;
+  height: 450px;
 }
 .blogCard hr {
   margin-top: 1rem;
+  color: #000;
 }
 .blogCard:hover .cardMainImg img {
   transform: scale(1.1);
@@ -37,15 +39,17 @@
 .blogCard .cardMainImg {
   border-radius: 5px;
   overflow: hidden;
+  display: flex;
+  justify-content: space-evenly;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 .blogCard .cardMainImg img {
-  width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   transition: 0.1s ease-in-out;
 }
 .blogCard .cardcont h3 {
+  color: #000;
   text-transform: capitalize;
   font-size: 21px;
   margin-bottom: 0.5rem;
@@ -54,7 +58,7 @@
 .blogCard .cardcont .desc {
   color: #515151;
   line-height: 1.2rem;
-  margin-bottom: 6rem;
+  padding-bottom: 6rem;
 }
 .blogCard .bottomSec {
   position: absolute;

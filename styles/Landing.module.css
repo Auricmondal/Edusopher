@@ -58,16 +58,18 @@
 .hero .right img {
   display: none;
   visibility: hidden;
+  max-width: 100%;
+  aspect-ratio: 47/60 !important;
 }
 .hero .right .list {
-  z-index: 100;
-  box-shadow: 0 0 2px;
-  max-width: 59vw;
+  aspect-ratio: 107/100;
+  height: 200px;
+  max-width: 100%;
   margin: auto;
   text-align: left;
   background: #4778ff;
   padding: 30px;
-  border-radius: 50px;
+  border-radius: 20px;
   box-shadow: 0 0 7px rgba(53, 53, 53, 0.603);
   color: white;
 }
@@ -81,7 +83,10 @@
   max-width: 7rem;
   text-align: center;
 }
-.hero .right .list p {
+.hero .right .list li:nth-child(1) {
+  padding-top: 1rem;
+}
+.hero .right .list li {
   padding: 0.5rem 0;
 }
 
@@ -330,10 +335,6 @@
   align-items: center;
   height: 22px;
 }
-.section3 .container .leftsec3 p {
-  display: flex;
-  align-items: center;
-}
 .section3 .container .rightsec3 {
   color: #efefef;
   margin-bottom: 2rem;
@@ -341,6 +342,8 @@
 .section3 .container .rightsec3 p {
   margin-bottom: 2rem;
   line-height: 1.5rem;
+  font-size: 24px;
+  text-align: left;
 }
 
 @media only screen and (min-width: 600px) {
@@ -395,6 +398,7 @@
   }
   .hero .container .right .list {
     border-radius: 30px;
+    min-height: 250px;
     max-width: 20vw;
   }
   .hero .container .right .list .listitems {
@@ -453,6 +457,7 @@
   .hero .container .right .list {
     position: relative;
     right: -20%;
+    min-height: 200px;
     max-width: 25vw;
   }
   .hero .container .right .list .listitems {
@@ -515,23 +520,17 @@
   .section2 .container .rightsec2 {
     display: block;
     visibility: visible;
-  }
-  .section3 {
-    -webkit-clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%, 50% 20%);
-            clip-path: polygon(0 0, 0 100%, 100% 100%, 100% 0%, 50% 20%);
+    position: relative;
+    width: 100%;
+    margin-left: 1rem;
   }
   .section3 .container h2 {
     padding-top: 12rem;
   }
   .section3 .container .subcont {
     margin-bottom: 4rem;
-    display: flex;
-    flex-direction: row;
   }
   .section3 .container .subcont .leftsec3 {
     min-width: 40%;
-  }
-  .section3 .container .subcont .rightsec3 {
-    text-align: left;
   }
 }/*# sourceMappingURL=Landing.module.css.map */

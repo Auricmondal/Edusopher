@@ -5,9 +5,19 @@ const nextConfig = {
   optimizeFonts:true,
   swcMinify:true,
     images: {
-      domains: ['cdn.sanity.io'],
+      unoptimized :true,
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: 'cdn.sanity.io'
+        },
+      ],
       minimumCacheTTL:1500000,
   },
 }
+const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  enabled: true,
+  openAnalyzer: false,
+})
 
-module.exports = nextConfig
+module.exports = withBundleAnalyzer(nextConfig)

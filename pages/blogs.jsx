@@ -74,6 +74,7 @@ export async function getStaticProps() {
     categories->{
       title
     },
+    metadesc,
     language->{
       title
     },

@@ -1,4 +1,4 @@
-import { GetStaticProps } from 'next';
+
 import {sanityClient,urlFor} from '../../sanity'
 import stylesBlog from '../../styles/blog.module.css'
 import Image from 'next/image'
@@ -13,7 +13,7 @@ const Slug = ({posts,relArt}=props) => {
     <Head title={posts.title} metadesc={posts.metadesc} ogImg={posts.mainImage}/>
     <div className={stylesBlog.blog}>
         <div className={stylesBlog.mainImgCont}>
-        <Image src={posts.mainImage?urlFor(posts.mainImage).url():'/demoimg.jpg'} alt={posts.mainImage && posts.mainImage.alt?posts.mainImage.alt:null} width={1000} height={1000} quality={100}/>
+        <Image  src={posts.mainImage?urlFor(posts.mainImage).url():'/demoimg.webp'} priority={true} alt={posts.mainImage && posts.mainImage.alt?posts.mainImage.alt:null} width={600} height={200} />
         </div>
           <Sectionui type={'index'} posts={posts}/>
         <div className={stylesBlog.mainAndAds}>
@@ -61,7 +61,7 @@ const Slug = ({posts,relArt}=props) => {
     }
     }
   
-    export const getStaticProps= GetStaticProps= async ({params})=>{
+    export const getStaticProps= async ({params})=>{
         const query1 = `*[_type == "post" && slug.current ==$slug][0]{
           _createdAt,
            _id,
@@ -78,10 +78,21 @@ const Slug = ({posts,relArt}=props) => {
           name,
           image
         },
-        description,
+        metadesc,
         slug,
         mainImage,
-        body
+        body[]{
+          ...,
+          markDefs[]{
+          
+            ...,
+            _type=="internalLink"=>{
+            ...,
+            "slug":@.reference->slug
+          }
+          
+          }
+        }
       }
       `;
       

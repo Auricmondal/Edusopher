@@ -45,6 +45,7 @@ const hamburgerMenu = ({setHamCheck}=props) => {
                 <li onClick={handleHamClose}><Link href="/english" className={stylesComp.link}>English</Link></li>
                 {/* <li onClick={handleHamClose}><Link href="/geography" className={stylesComp.link}>Geography</Link></li> */}
                 {/* <li onClick={handleHamClose}><Link href="/history" className={stylesComp.link}>History</Link></li> */}
+                <li onClick={handleHamClose}><Link href="/dream dictionary" className={stylesComp.link}>Dream Dictionary</Link></li>
                 <li onClick={handleHamClose}><Link href="/astrology %26 mythology" className={stylesComp.link}>Astrology/ Mythology</Link></li>
               </ul>:null}
             

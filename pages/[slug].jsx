@@ -1,5 +1,4 @@
 import { useRouter } from "next/router";
-import { GetStaticProps } from "next";
 import { sanityClient } from "../sanity";
 import styles from "../styles/blogs.module.css";
 import BlogCard from "component/blogs/blogCard";
@@ -97,7 +96,7 @@ export const getStaticPaths = async () => {
   };
 };
 
-export const getStaticProps= GetStaticProps = async ({ params }) => {
+export const getStaticProps=  async ({ params }) => {
   const query1 = `*[_type == "post"&& categories->title==$slug]{
         _createdAt,
         categories->{

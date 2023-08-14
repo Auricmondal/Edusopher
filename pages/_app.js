@@ -1,12 +1,13 @@
 import "../styles/globals.css";
 import Navbar from "../component/navbar";
-import Footer from "../component/footer";
-import NextNProgress from "nextjs-progressbar";
-import * as gtag from '../lib/gtag'
 import { useRouter } from "next/router";
 import { useEffect } from "react";
 import Script from 'next/script'
-
+import dynamic from 'next/dynamic'
+import * as gtag from '../lib/gtag'
+// const gtag = dynamic(() => import('../lib/gtag'))
+const NextNProgress = dynamic(() => import('nextjs-progressbar'))
+const Footer = dynamic(() => import('../component/footer'))
 
 function MyApp({ Component, pageProps }) {
   const router = useRouter()
